@@ -5,6 +5,7 @@ import { Button, FormControl } from 'react-bootstrap';
 import handleKeys from '../../util/keyPressInputHelper';
 import { RefObject } from 'react';
 import { Popover } from '../../layout/Popover';
+import './GroupTabsSection.scss';
 
 export const GroupTabsSection = ({
   groups,

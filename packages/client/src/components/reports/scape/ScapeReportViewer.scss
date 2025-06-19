@@ -1,4 +1,4 @@
-@import '../../../styles/shared.scss';
+@use '../../../styles/shared.scss' as *;
 
 .img-container {
   margin: 100px;

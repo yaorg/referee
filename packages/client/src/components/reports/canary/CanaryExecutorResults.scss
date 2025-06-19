@@ -1,4 +1,4 @@
-@import '../../../styles/shared';
+@use '../../../styles/shared' as *;
 
 .canary-executor-results {
   padding: 10px;
@@ -12,6 +12,14 @@
     .chevron {
       height: 33px;
       margin-left: 10px;
+    }
+
+    .fa-chevron-down {
+      width: 0.875em;
+    }
+
+    .fa-chevron-right {
+      width: 0.625em;
     }
 
     .row-item {

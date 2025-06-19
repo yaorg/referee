@@ -1,4 +1,4 @@
-@import '../../styles/shared.scss';
+@use '../../styles/shared.scss' as *;
 
 .terminal-canary-wrapper {
   padding: 15px 0 10px 0;

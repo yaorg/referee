@@ -7,7 +7,8 @@ import log from '../util/LoggerFactory';
 import path from 'path-browserify';
 import Optional from 'optional-js';
 import hljs from 'highlight.js';
-import marked from 'marked';
+// @ts-ignore
+import { marked } from 'marked';
 
 const { docsStore } = stores;
 
