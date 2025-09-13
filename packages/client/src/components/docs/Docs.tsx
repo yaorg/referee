@@ -4,7 +4,8 @@ import { connect, ConnectedComponent } from '../connectedComponent';
 import DocsStore from '../../stores/DocsStore';
 import { observer } from 'mobx-react';
 import { RouteComponentProps } from 'react-router';
-import marked from 'marked';
+// @ts-ignore
+import { marked } from 'marked';
 import Optional from 'optional-js';
 import hljs from 'highlight.js';
 

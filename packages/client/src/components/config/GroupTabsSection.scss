@@ -1,0 +1,23 @@
+@use '../../styles/shared' as *;
+
+#canary-configuration-form-view {
+  .input-group {
+    .input-group-append {
+      .btn {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
+
+  .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+}

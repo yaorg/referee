@@ -1,4 +1,4 @@
-@import '../../styles/shared';
+@use '../../styles/shared' as *;
 
 .toggleable-time-stamp-container {
   display: flex;

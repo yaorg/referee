@@ -1,4 +1,4 @@
-@import '../../../styles/shared.scss';
+@use '../../../styles/shared.scss' as *;
 
 .canary-metadata-section {
   display: flex;
@@ -57,14 +57,20 @@
           padding-right: 5px;
           margin-top: 5px;
           align-self: flex-start;
+          width: 1.1em;
+          box-sizing: inherit;
         }
 
         .hourglass {
           padding-right: 5px;
+          width: 0.75em;
+          box-sizing: inherit;
         }
 
         .map-marker {
           padding-right: 5px;
+          width: 0.75em;
+          box-sizing: inherit;
         }
       }
     }

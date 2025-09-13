@@ -1,5 +1,7 @@
 import express from 'express';
 import proxy from 'express-http-proxy';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import util from 'util';
 import Optional from 'optional-js';
 import path from 'path';
@@ -53,13 +55,15 @@ app.post('/metrics', (req, res) => {
 
 app.use(
   '/kayenta',
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   proxy(Optional.ofNullable(process.env.KAYENTA_BASE_URL).orElse('http://localhost:8090'), {
     proxyReqOptDecorator: (proxyReqOpts: any) => {
       // Hook for self signed certs https://www.npmjs.com/package/express-http-proxy#q-how-to-ignore-self-signed-certificates-
       proxyReqOpts.rejectUnauthorized = !!process.env.DISABLE_KAYENTA_SSL_VERIFICATION;
       return proxyReqOpts;
     },
-    proxyReqPathResolver: req => {
+    proxyReqPathResolver: (req: any) => {
       return process.env.KAYENTA_BASE_PATH ? `${process.env.KAYENTA_BASE_PATH}${req.url}` : req.url;
     }
   })
@@ -76,6 +80,8 @@ app.use(
     setHeaders: (res, path) => {
       if (path.endsWith('.html')) {
         // All of the project's HTML files end in .html
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
         res.setHeader('Cache-Control', 'no-cache');
       }
     }
@@ -87,6 +93,8 @@ app.get('/dashboard/*', (req, res) => {
   res.setHeader('Cache-Control', 'no-cache');
   res.sendFile(path.join(publicRoot, '/index.html'), err => {
     if (err) {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
       res.status(500).send(util.inspect(err));
     }
   });

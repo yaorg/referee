@@ -8,7 +8,9 @@
       "esnext"
     ],
     "noEmit": true,
-    "module": "esnext"
+    "module": "esnext",
+    "noFallthroughCasesInSwitch": true,
+    "jsx": "react-jsx",
   },
   "include": [
     "./src"

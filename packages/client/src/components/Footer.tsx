@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { version } from '../../package.json';
+import packageInfo from '../../package.json';
 
 import './Footer.scss';
 
@@ -13,7 +13,7 @@ export default class Footer extends React.Component {
             <div className="footer-label" id="about">
               About
             </div>
-            <div>Version: {version}</div>
+            <div>Version: {packageInfo.version}</div>
           </Col>
           <Col>
             <div className="footer-label" id="about">

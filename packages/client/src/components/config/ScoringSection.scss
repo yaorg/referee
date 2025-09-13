@@ -10,6 +10,14 @@
         margin-bottom: 8px;
       }
     }
+
+    .input-group-prepend {
+      .input-group-text {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        background-color: #e9ecef;
+      }
+    }
   }
 
   .alert {

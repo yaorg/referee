@@ -1,4 +1,4 @@
-@import '../../styles/shared';
+@use '../../styles/shared' as *;
 
 .metrics-container-wrapper {
   display: flex;

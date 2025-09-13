@@ -1,4 +1,4 @@
-@import 'typeface';
+@use 'typeface' as *;
 
 $black: #111111;
 $white: #ffffff;
@@ -33,6 +33,11 @@ $fail-color: $error;
 .btn {
   @extend .un-selectable;
   cursor: pointer;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
 }
 
 .uppercase {
@@ -148,4 +153,92 @@ $fail-color: $error;
   color: $nodata;
 }
 
+label {
+  display: inline-block;
+  width: auto !important;
+  max-width: none !important;
+  padding-right: 0 !important;
+}
 
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.tooltip-container {
+  padding-left: 5px;
+  width: auto;
+  max-width: none;
+}
+
+.modal-content {
+  .text-muted.form-text {
+    display: block;
+    font-size: 80%;
+  }
+}
+
+.input-group {
+  .input-group-prepend {
+    margin-right: -1px;
+
+    .input-group-text {
+      border-radius: 0.25rem;
+      background-color: #e9ecef;
+    }
+  }
+
+  .input-group-append {
+    margin-left: -1px !important;
+
+    .btn {
+      border-radius: 0.25rem;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  .input-group-prepend:not(:first-child) {
+    .input-group-text {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+}
+
+.form-text {
+  display: block;
+}
+
+.alert-dismissible {
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    padding: 0.75rem 1.25rem;
+    color: inherit;
+  }
+}
+
+button.close {
+  background-color: transparent;
+  border: 0;
+}
+
+.close {
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  opacity: .5;
+}
+
+.close:hover {
+  color: #000;
+  opacity: .75;
+}
+
+#webpack-dev-server-client-overlay {
+  display: none;
+}

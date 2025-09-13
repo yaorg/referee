@@ -48,6 +48,7 @@ export default class KayentaApiService {
       log.info(response);
       return response.data;
     } catch (error) {
+      // @ts-ignore
       log.info(error.response);
       throw error;
     }

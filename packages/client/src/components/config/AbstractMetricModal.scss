@@ -1,4 +1,4 @@
-@import '../../styles/shared';
+@use '../../styles/shared' as *;
 
 .modal-lg {
   @media (min-width: 1275px) {

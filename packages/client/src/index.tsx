@@ -1,5 +1,12 @@
 import * as React from 'react';
-import ReactDOM from 'react-dom';
 import App from './components/App';
+import { createRoot } from 'react-dom/client';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+window.process = {
+    ...window.process,
+};
+
+const container = document.getElementById('root');
+// @ts-ignore
+const root = createRoot(container);
+root.render(<App />);

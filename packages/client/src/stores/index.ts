@@ -11,7 +11,7 @@ export const stores = {
   modalStore: new ListStore(),
   errorStore: new ListStore(),
   canaryExecutorStore: new CanaryExecutorStore(),
-  reportStore: new ReportStore()
+  reportStore: new ReportStore(),
 };
 
 const hydrate = create({

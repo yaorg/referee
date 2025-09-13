@@ -1,0 +1,13 @@
+@use '../../styles/shared' as *;
+
+#canary-configuration-edit {
+  .titled-section-contents {
+    .btn {
+      margin-left: 5px;
+    }
+
+    table {
+      margin-top: 1rem;
+    }
+  }
+}

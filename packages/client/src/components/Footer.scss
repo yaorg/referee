@@ -1,4 +1,4 @@
-@import '../styles/shared.scss';
+@use '../styles/shared' as *;
 
 #footer {
   @extend .heading-font;
